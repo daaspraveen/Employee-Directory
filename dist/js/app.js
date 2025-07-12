@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .split("/")
     ?.slice(-1)[0]
     ?.split(".")[0];
+  // console.log('pathname', pathname)
   // Edit
   if (pathname === "form") {
     function getQueryParam(name) {
@@ -195,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
-  } else if (pathname !== "form.html") {
+  } else if (pathname !== "form") {
     renderDataCards(localData);
     const doSortByNameSelect = document.getElementById("sortByName");
     doSortByNameSelect.addEventListener("change", doSortByName);
