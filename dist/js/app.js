@@ -3,25 +3,35 @@ document.addEventListener("DOMContentLoaded", function () {
   // MockData
   let localData =
     JSON.parse(localStorage.getItem("empMockData")) || mockEmployees;
+  // console.log('localData', localData)
   const setLocalData = (data) => {
     localStorage.setItem("empMockData", JSON.stringify(data));
   };
   const searchInput = document.getElementById("search-input");
-  searchInput?.addEventListener('keyup', function (e) {
+  searchInput?.addEventListener("keyup", function (e) {
     const sValue = e.target.value.trim();
-    if (sValue.length >0){
+    if (sValue.length > 0) {
       // console.log(sValue);
-      const filteredName = localData.filter(i => i.firstName.includes(sValue) || i.lastName.includes(sValue) || i.email.includes(sValue))
+      const filteredName = localData.filter(
+        (i) =>
+          i.firstName.includes(sValue) ||
+          i.lastName.includes(sValue) ||
+          i.email.includes(sValue)
+      );
       renderDataCards(filteredName);
-    } else {renderDataCards(localData)}
+    } else {
+      renderDataCards(localData);
+    }
   });
 
   const doSortByName = (e) => {
     const sortBy = e.target.value;
     // console.log(sortBy);
-    if (sortBy === 'firstname') localData.sort((a, b) => a.firstName.localeCompare(b.firstName));
-    if (sortBy === 'department')localData.sort((a, b) => a.department.localeCompare(b.department));
-    if (sortBy === '') localData.sort((a,b) => a.id-b.id);
+    if (sortBy === "firstname")
+      localData.sort((a, b) => a.firstName.localeCompare(b.firstName));
+    if (sortBy === "department")
+      localData.sort((a, b) => a.department.localeCompare(b.department));
+    if (sortBy === "") localData.sort((a, b) => a.id - b.id);
     // console.log(localData)
     renderDataCards(localData);
   };
@@ -67,8 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const pathname = window.location.pathname
     .split("/")
-    .slice(-1)[0]
-    .split(".")[0];
+    ?.slice(-1)[0]
+    ?.split(".")[0];
   // Edit
   if (pathname === "form") {
     function getQueryParam(name) {
@@ -134,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
           setLocalData(filteredList);
           // console.log(filteredList, localData);
 
-          window.location.href="dashboard.html";
+          window.location.href = "index.html";
         } else {
           formError.textContent = "** Enter Valid Details";
         }
@@ -179,15 +189,15 @@ document.addEventListener("DOMContentLoaded", function () {
           // console.log(newAddedEmpList, localData);
           setLocalData(localData);
 
-          window.location.href = "dashboard.html";
+          window.location.href = "index.html";
         } else {
           formError.textContent = "** Enter Valid Details";
         }
       });
     }
-  } else if (pathname === "dashboard") {
+  } else if (pathname !== "form.html") {
     renderDataCards(localData);
     const doSortByNameSelect = document.getElementById("sortByName");
-    doSortByNameSelect.addEventListener('change', doSortByName);
+    doSortByNameSelect.addEventListener("change", doSortByName);
   }
 });

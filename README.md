@@ -29,17 +29,14 @@ A responsive and interactive employee directory built using **HTML**, **CSS**, a
 
 ## 📁 Project Structure
     employee-directory/
-        ├── src/main/resources/
-        │    ├── templates
-        │    │   ├── dashboard.html # Main dashboard page
-        │    │   └── form.html # Add/Edit employee page
-        │    │
-        │    ├── static
-        │        ├── js/
-        │        │   ├── data.js # Initial mock employee data
-        │        │   └── app.js # Core JS logic (render, edit, delete, etc.)
-        │        ├── css/
-        │            └── style.css # All styles
+        ├── dist/
+        │    ├── index.html # Main dashboard page
+        │    ├── form.html # Add/Edit employee page
+        │    ├── js/
+        │    │    ├── data.js # Initial mock employee data
+        │    │    └── app.js # Core JS logic (render, edit, delete, etc.)
+        │    └── css/
+        │         └── style.css # All styles
         └── README.md
 
 ---
@@ -49,8 +46,17 @@ A responsive and interactive employee directory built using **HTML**, **CSS**, a
 > No build or backend setup required.
 
 1. Clone or download this repo.
-2. Open `dashboard.html` in any browser.
+2. Open `index.html` in any browser.
 3. To edit an employee, the app navigates to: `form.html?editId={id}`
+
+
+---
+
+## ▶️ Project Screenshots
+<img src="./ss1.png" width="500" alt="Screenshot1">
+<img src="./ss2.png" width="500" alt="Screenshot2">
+<img src="./ss3.png" width="500" alt="Screenshot3">
+<img src="./ss4.png" width="500" alt="Screenshot4">
 
 ---
 
