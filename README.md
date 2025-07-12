@@ -28,4 +28,41 @@ A responsive and interactive employee directory built using **HTML**, **CSS**, a
 ---
 
 ## 📁 Project Structure
+    employee-directory/
+        ├── src/main/resources/
+        │    ├── templates
+        │    │   ├── dashboard.html # Main dashboard page
+        │    │   └── form.html # Add/Edit employee page
+        │    │
+        │    ├── static
+        │        ├── js/
+        │        │   ├── data.js # Initial mock employee data
+        │        │   └── app.js # Core JS logic (render, edit, delete, etc.)
+        │        ├── css/
+        │            └── style.css # All styles
+        └── README.md
 
+---
+
+## ▶️ How to Run
+
+> No build or backend setup required.
+
+1. Clone or download this repo.
+2. Open `dashboard.html` in any browser.
+3. To edit an employee, the app navigates to: `form.html?editId={id}`
+
+---
+
+## 💡 Future Improvements
+
+- Add filter toggle button + popup UI
+- Show toast/alerts on save/delete
+- Reset/clear filters and sorting
+- Optional Freemarker/Java integration
+
+---
+
+## 🙋 Author
+
+- [PraveenKumar Dasari](https://github.com/daaspraveen)
