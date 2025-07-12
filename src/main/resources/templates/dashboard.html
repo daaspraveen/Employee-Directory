@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Directory - Dashboard</title>
+    <!-- STYLE SHEETS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>Employee Directory</h1>
+        <input type="text" id="search-input" placeholder="Search by name or email" />
+        <button type="button" id="filter-btn" onclick={doFilter()}>Filter</button>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <!-- Section 1 = Sorts & Add Emp Btn -->
+        <section id="options-box">
+            <div id="sort-box">
+                <span>
+                    <p>Sort:</p>
+                    <select id="sortByName" value="">
+                        <option value="">--Select--</option>
+                        <option value="firstname">Firstname</option>
+                        <option value="department">Department</option>
+                    </select>
+                </span>
+                <span>
+                    <p>Show:</p>
+                    <select id="sortByCount" onchange="">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                    </select>
+                </span>
+            </div>
+            <button type="button" id="addEmp-btn" onclick="location.href='form.html'">Add Employee</button>
+        </section>
+
+        <!-- Section 2 = DataCards   -->
+        <section id="data-cards-section">
+            <div id="data-cards-box">
+            </div>
+        </section>
+
+        <!-- Section 3 = Pagination -->
+        <!-- <section>
+        </section> -->
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Employee Directory App. All rights reserved.</p>
+    </footer>
+
+    <!-- =============== -->
+    <!-- JS Scripts -->
+    <script src="../static/js/data.js"></script>
+    <script src="../static/js/app.js"></script>
+</body>
+
+</html>

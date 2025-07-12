@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Directory - Add Details</title>
+
+    <link rel="stylesheet" href="../static/css/style.css" />
+</head>
+<body>
+    <main class="form‑wrapper">
+        <h2 id="formTitle">Add Employee Info</h2>
+        <form id="employeeForm" novalidate>
+            <!-- Hidden field only used on Edit -->
+            <input type="hidden" id="empId" />
+            <div class="field">
+                <label for="firstName">First Name</label>
+                <input id="firstName" name="firstName" required />
+            </div>
+            <div class="field">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" name="lastName" required />
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+            </div>
+            <div class="field">
+                <label for="department">Department</label>
+                <input id="department" name="department" required />
+            </div>
+            <div class="field">
+                <label for="role">Role</label>
+                <input id="role" name="role" required />
+            </div>
+            <p class="error‑msg" id="errorMsg"></p>
+            <div class="btn‑row">
+                <button type="submit" class="primary" id="saveBtn">Save</button>
+                <button type="button" class="secondary" id="cancelBtn"
+                    onclick="location.href='dashboard.html'">Cancel</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- =============== -->
+    <!-- JS Scripts -->
+    <script src="../static/js/data.js"></script>
+    <script src="../static/js/app.js"></script>
+</body>
+
+</html>
